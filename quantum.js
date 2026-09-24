@@ -174,4 +174,3 @@
   ['logical-bit','error-type','error-location'].forEach(id => $(id).addEventListener('change', renderErrorCode));
   renderErrorCode();
 })();
-
