@@ -49,6 +49,8 @@
     .exhibit{min-width:0;position:relative;overflow:hidden;border-radius:20px;min-height:477px;display:flex;flex-direction:column;isolation:isolate;transition:transform .3s cubic-bezier(.2,.8,.2,1),box-shadow .3s;background:#252a50}
     .exhibit:hover{transform:translateY(-6px);box-shadow:0 20px 35px rgba(36,39,75,.13)}
     .exhibit-space{background:#292d57;color:#fbfaf4}
+    .exhibit-space .status{background:var(--lime);color:var(--ink);border-color:var(--lime);opacity:1}
+    .space-art-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:37% center}
     .exhibit-light{background:#bdadf8;color:#292e55}
     .exhibit-quantum{background:#202545;color:#fbfaf4;--fade:#202545}
     .exhibit-quantum .status{background:var(--lime);color:var(--ink);border-color:var(--lime);opacity:1}
@@ -136,13 +138,13 @@
     // cards without a URL are displayed honestly as upcoming experiences.
     const exhibits = [
       {number:'01',theme:'quantum',category:'Computing & physics',title:'How quantum computers work',description:'Build circuits, reveal interference, and explore entanglement in a hands-on guide.',status:'Explore now',url:'quantum.html'},
-      {number:'02',theme:'space',category:'Space & scale',title:'The scale of everything',description:'Zoom from the tiniest things we know to the edge of the observable universe.',status:'Coming soon',url:null},
+      {number:'02',theme:'space',category:'Space & scale',title:'The scale of everything',description:'Travel 62 orders of magnitude, from the Planck length to our cosmic horizon.',status:'Explore now',url:'scale.html'},
       {number:'03',theme:'light',category:'Light & perception',title:'Bend the light',description:'Play with lenses, rays, and focus to see how images take shape.',status:'Coming soon',url:null}
     ];
 
     const art = {
       quantum:`<div class="card-art" aria-hidden="true"><i class="quantum-ring"></i><i class="quantum-ring two"></i><i class="quantum-core">ψ</i><span class="quantum-spark">✦</span><span class="quantum-spark two">✳</span></div>`,
-      space:`<div class="card-art" aria-hidden="true"><i class="orbit one"></i><i class="orbit two"></i><i class="orbit three"></i><i class="sun"></i><i class="planet planet-a"></i><i class="planet planet-b"></i><i class="planet planet-c"></i><i class="star s1"></i><i class="star s2"></i><i class="star s3"></i><i class="star s4"></i><i class="star s5"></i><i class="star s6"></i><span class="twinkle">✦</span></div>`,
+      space:`<div class="card-art" aria-hidden="true"><img class="space-art-image" src="assets/scale-solar.webp" alt="" loading="lazy"></div>`,
       light:`<div class="card-art" aria-hidden="true"><i class="light-circle"></i><i class="light-circle"></i><i class="light-circle"></i><i class="light-beam"></i><i class="lens-wrap"></i><i class="ray-dot"></i><span class="light-spark">✳</span><span class="light-spark two">✦</span></div>`
     };
 
